@@ -1,7 +1,5 @@
 const { app, BrowserWindow } = require('electron')
 
-const path = require('path')
-
 require('@electron/remote/main').initialize()
 
 function createWindow() {
@@ -11,7 +9,8 @@ function createWindow() {
     height: 600,
     webPreferences: {
       nodeIntegration: true,
-      enableRemoteModule: true
+      enableRemoteModule: true,
+      titlebarStyle: "hidden",
     }
   })
 
