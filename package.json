@@ -10,9 +10,12 @@
     "@testing-library/user-event": "^13.5.0",
     "bootstrap": "^5.3.6",
     "concurrently": "^9.1.2",
+    "cross-env": "^7.0.3",
+    "electron": "^36.3.2",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "react-scripts": "5.0.1",
+    "wait-on": "^8.0.3",
     "web-vitals": "^2.1.4"
   },
   "main": "public/main.js",
