@@ -15,26 +15,100 @@
   margin-bottom: 1.5vw;
 }
 
-.Title {
+h1 {
   color: #4b4a67;
-  font-size: 8vw;
-  text-align: center;
+  font-size: 12vw;
   justify-self: center;
   display: flex;
 }
 
+h2 {
+  color: #4b4a67;
+  font-size: 7vw;
+  justify-self: center;
+  display: flex;
+}
+
+h3 {
+  color: #4b4a67;
+  font-size: 5vw;
+  justify-self: center;
+  display: flex;
+  margin-bottom: 2vw;
+}
+
+#notes {
+  color: #4b4a67;
+  font-size: 3.5vw;
+  justify-self: center;
+  margin-top: 3.5vw;
+  display: flex;
+}
+
 .Button {
-  width: 8vw;
-  height: 8vw;
+  padding: 1vw;
   border: none;
   background: transparent;
-  display: flex;
 }
 
 .Icon {
   width: 8vw;
   color: #4b4a67;
-  display : flex;
+}
+
+.Project {
+  background: white;
+  border-radius: 3vw;
+  padding: 2vw;
+  padding-bottom: 4.5vw;
+  border-style: solid;
+  border-color: #226F54;
+  border-width: 1vw;
+}
+
+.Counters {
+  display: flex;
+  place-items: center center;
+  justify-content: space-evenly;
+}
+
+.Counter-buttons-outer {
+  display: flex;
+  place-items: center center;
+}
+
+.Counter-buttons {
+  display: flex;
+  gap: 1.2vw;
+}
+
+.Counter-icon {
+  width: 5vw;
+  color: #4b4a67;
+}
+
+#restart-button {
+  text-align: center;
+  border-style: solid;
+  border-color: #4B4A67;
+  border-width: 0.8vw;
+  border-radius: 3vw;
+}
+
+#add-button {
+  text-align: center;
+  border-style: solid;
+  border-color: #FD96A9;
+  border-width: 0.8vw;
+  border-radius: 3vw;
+}
+
+#subtract-button {
+  text-align: center;
+  border-style: solid;
+  border-color: #FD96A9;
+  border-width: 0.8vw;
+  border-radius: 3vw;
 }
 
 .App-logo {

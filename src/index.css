@@ -9,8 +9,6 @@
 body {
   margin: 2vw;
   font-family: 'MonomaniacOne-Regular';
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
   background-color: #c8d6af;
 }
 

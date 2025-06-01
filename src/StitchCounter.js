@@ -2,14 +2,14 @@ import Restart from './assets/restart.png';
 import Subtract from './assets/subtract.png';
 import Add from './assets/add.png';
 
-function RowCounter() {
+function StitchCounter() {
     return (
         <div>
             <h1>
                 0
             </h1>
             <h3>
-                Rows
+                Stitches
             </h3>
             <div class="Counter-buttons-outer">
                 <div class="Counter-buttons">
@@ -30,4 +30,4 @@ function RowCounter() {
     );
 }
 
-export default RowCounter;
+export default StitchCounter;
