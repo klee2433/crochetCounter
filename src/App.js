@@ -1,11 +1,13 @@
+import './App.css';
+
 import Header from './Header';
+import Project from './Project';
 
 function App() {
   return (
-    <div className="bg-[#c8d6af] flex flex-row justify-center w-full min-h-screen">
-      <div className="bg-[#c8d6af] w-full max-w-[1280px] relative py-5">
-        <div><Header /></div>
-      </div>
+    <div class="App">
+      <div><Header /></div>
+      <div><Project /></div>
     </div>
   );
 }

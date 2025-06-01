@@ -1,13 +1,17 @@
+/* Palette 
+  English Violet #4B4A67
+  Salmon Pink #FD96A9
+  Celadon #8FD694
+  Dark Spring Green #226F54
+  Tea Green #C8D6AF
+*/
+
 body {
-  margin: 0;
+  margin: 2vw;
   font-family: 'MonomaniacOne-Regular';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  background-color: #c8d6af;
 }
 
 @font-face {
