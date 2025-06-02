@@ -49,6 +49,9 @@ h3 {
   padding: 1vw;
   border: none;
   background: transparent;
+  color: #226F54;
+  font-size: 5vw;
+  text-align: left;
 }
 
 .Icon {
@@ -64,6 +67,15 @@ h3 {
   border-style: solid;
   border-color: #226F54;
   border-width: 1vw;
+}
+
+.List {
+  text-align: left;
+  color: #4b4a67;
+  font-size: 5vw;
+  display: flex;
+  margin-bottom: 2vw;
+  text-decoration: underline;
 }
 
 .Counters {
@@ -109,6 +121,13 @@ h3 {
   border-color: #FD96A9;
   border-width: 0.8vw;
   border-radius: 3vw;
+}
+
+.Project-list {
+  display: flex;
+  place-items: center center;
+  justify-content: space-between;
+  margin-top: 3vw;
 }
 
 .App-logo {

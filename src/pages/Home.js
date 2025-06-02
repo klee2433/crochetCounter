@@ -1,7 +1,11 @@
+import MenuHeader from '../components/MenuHeader';
+import Menu from '../components/Menu';
+
 function Home() {
   return (
     <div class="App">
-        Home Page
+        <div><MenuHeader /></div>
+        <div><Menu /></div>
     </div>
   );
 }
