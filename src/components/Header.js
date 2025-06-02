@@ -1,4 +1,4 @@
-import Home from '../assets/home.png';
+import { IoIosHome } from "react-icons/io";
 import { useNavigate } from 'react-router-dom';
    
 function Header() {
@@ -7,7 +7,7 @@ function Header() {
     return (
         <header class="App-header">
             <button onClick={() => navigate('/home')} class="Button">
-                <img src={Home} alt="Home" class="Icon"/>
+                <IoIosHome class="Icon"/>
             </button>
         </header>
     );

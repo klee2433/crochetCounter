@@ -1,10 +1,10 @@
-import Add from '../assets/add.png';
+import { IoIosAddCircle } from "react-icons/io";
 
 function MenuHeader() {
     return (
         <header class="App-header">
             <button onClick={() => alert('Add button clicked')} class="Button">
-                <img src={Add} alt="Add" class="Icon"/>
+                <IoIosAddCircle class="Icon"/>
             </button>
         </header>
     );

@@ -1,6 +1,6 @@
-import Restart from '../assets/restart.png';
-import Subtract from '../assets/subtract.png';
-import Add from '../assets/add.png';
+import { RiRestartLine } from "react-icons/ri";
+import { RiSubtractFill } from "react-icons/ri";
+import { RiAddFill } from "react-icons/ri";
 
 import {useState} from 'react';
 
@@ -17,15 +17,15 @@ function RowCounter() {
             <div class="Counter-buttons-outer">
                 <div class="Counter-buttons">
                     <button onClick={() => setRows(0)} class="Button" id="restart-button">
-                        <img src={Restart} alt="Restart" class="Counter-icon"/>
+                        <RiRestartLine class="Restart-icon"/>
                     </button>
 
                     <button onClick={() => {if (rows > 0) setRows(rows - 1)}} class="Button" id="subtract-button">
-                        <img src={Subtract} alt="Subtract" class="Counter-icon"/>
+                        <RiSubtractFill class="Icon"/>
                     </button>
 
                     <button onClick={() => setRows(rows + 1)} class="Button" id="add-button">
-                        <img src={Add} alt="Add" class="Counter-icon"/>
+                        <RiAddFill class="Icon"/>
                     </button>
                 </div>
             </div>

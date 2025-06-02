@@ -55,8 +55,10 @@ h3 {
 }
 
 .Icon {
-  width: 8vw;
+  width: 6vw;
   color: #4b4a67;
+  display: flex;
+  place-items: center center;
 }
 
 .Project {
@@ -94,32 +96,31 @@ h3 {
   gap: 1.2vw;
 }
 
-.Counter-icon {
-  width: 5vw;
-  color: #4b4a67;
+.Restart-icon {
+  width: 6vw;
+  color: #FD96A9;
+  display: flex;
+  place-items: center center;
 }
 
 #restart-button {
-  text-align: center;
   border-style: solid;
-  border-color: #4B4A67;
-  border-width: 0.8vw;
+  border-color: #FD96A9;
+  border-width: 0.6vw;
   border-radius: 3vw;
 }
 
 #add-button {
-  text-align: center;
   border-style: solid;
-  border-color: #FD96A9;
-  border-width: 0.8vw;
+  border-color: #4B4A67;
+  border-width: 0.6vw;
   border-radius: 3vw;
 }
 
 #subtract-button {
-  text-align: center;
   border-style: solid;
-  border-color: #FD96A9;
-  border-width: 0.8vw;
+  border-color: #4B4A67;
+  border-width: 0.6vw;
   border-radius: 3vw;
 }
 
