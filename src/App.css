@@ -127,11 +127,28 @@ h3 {
   border-radius: 3vw;
 }
 
+.Title-list {
+  display: flex;
+  place-items: center center;
+  justify-content: space-between;
+  margin-left: 2vw;
+  margin-right: 7vw;
+}
+
 .Project-list {
   display: flex;
   place-items: center center;
   justify-content: space-between;
-  margin-top: 3vw;
+}
+
+.Name-input {
+  display: flex;
+  place-items: center center;
+  margin-left: 2vw;
+}
+
+.No-bullets {
+  list-style-type:none;
 }
 
 .App-logo {
