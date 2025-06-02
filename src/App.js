@@ -1,13 +1,21 @@
 import './App.css';
 
-import Header from './Header';
-import Project from './Project';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Home from './pages/Home';
+import Counter from './pages/Counter';
+import NoPage from './pages/NoPage';
 
 function App() {
   return (
-    <div class="App">
-      <div><Header /></div>
-      <div><Project /></div>
+    <div>
+      <BrowserRouter>
+        <Routes>
+          <Route index element={<Home />}/>
+          <Route path="/home" element={<Home />}/>
+          <Route path="/counter" element={<Counter />}/>
+          <Route path="*" element={<NoPage />}/>
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }

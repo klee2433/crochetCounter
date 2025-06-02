@@ -1,6 +1,6 @@
-import Restart from './assets/restart.png';
-import Subtract from './assets/subtract.png';
-import Add from './assets/add.png';
+import Restart from '../assets/restart.png';
+import Subtract from '../assets/subtract.png';
+import Add from '../assets/add.png';
 
 import {useState} from 'react';
 

@@ -1,9 +1,12 @@
-import Home from './assets/home.png';
+import Home from '../assets/home.png';
+import { useNavigate } from 'react-router-dom';
 
 function Header() {
+    const navigate = useNavigate();
+    
     return (
         <header class="App-header">
-            <button onClick={() => alert('Home button clicked!')} class="Button">
+            <button onClick={() => navigate('/home')} class="Button">
                 <img src={Home} alt="Home" class="Icon"/>
             </button>
         </header>
