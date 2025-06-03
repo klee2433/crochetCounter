@@ -1,12 +1,14 @@
 import { useNavigate } from 'react-router-dom';
 import { IoIosTrash } from "react-icons/io";
-import { useState } from 'react';
 import { IoIosAddCircle } from "react-icons/io";
+
+import { useState } from 'react';
+import { usePersistedState } from '../hooks/usePesistedState';
 
 function Menu() {
     const navigate = useNavigate();
-    const [projects, setProjects] = useState([]);
-    const [dates, setDates] = useState([]);
+    const [projects, setProjects] = usePersistedState("projects", [])
+    const [dates, setDates] = usePersistedState("dates", [])
     const [newProject, setNewProject] = useState("");
 
     const currentDate = new Date();

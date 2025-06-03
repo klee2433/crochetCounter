@@ -2,10 +2,11 @@ import { RiRestartLine } from "react-icons/ri";
 import { RiSubtractFill } from "react-icons/ri";
 import { RiAddFill } from "react-icons/ri";
 
-import {useState} from 'react';
+import { usePersistedState } from '../hooks/usePesistedState';
 
 function RowCounter() {
-    const [rows, setRows] = useState(0);
+    const [rows, setRows] = usePersistedState("rows", 0)
+
     return (
         <div>
             <h1>

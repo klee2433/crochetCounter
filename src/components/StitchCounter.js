@@ -2,10 +2,11 @@ import { RiRestartLine } from "react-icons/ri";
 import { RiSubtractFill } from "react-icons/ri";
 import { RiAddFill } from "react-icons/ri";
 
-import {useState} from 'react';
+import { usePersistedState } from '../hooks/usePesistedState';
 
 function StitchCounter() {
-    const [stitches, setStitches] = useState(0);
+    const [stitches, setStitches] = usePersistedState("stitches", 0);
+
     return (
         <div>
             <h1>
