@@ -1,7 +1,11 @@
 import RowCounter from './RowCounter';
 import StitchCounter from './StitchCounter';
 
+import { usePersistedState } from '../hooks/usePesistedState';
+
 function Project() {
+    const [notes, setNotes] = usePersistedState("notes","Notes")
+
     return (
         <div class="Project">
             <h2>
@@ -11,8 +15,13 @@ function Project() {
                 <RowCounter />
                 <StitchCounter />
             </div>
-            <textarea id="notes" name="notes" rows="4" cols="50">
-                Notes
+            <textarea 
+                id="notes" 
+                name="notes" 
+                rows="4" 
+                cols="50" 
+                value={notes}
+                onChange={e => setNotes(e.target.value)}>
             </textarea>
         </div>
     );
