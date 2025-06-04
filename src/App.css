@@ -55,11 +55,25 @@ h3 {
   text-align: left;
 }
 
+.Button:hover {
+  color: #049f69;
+  border-radius: 3vw;
+}
+
+#project-date:hover {
+  color: #226F54;
+}
+
 .Icon {
   width: 6vw;
   color: #4b4a67;
   display: flex;
   place-items: center center;
+}
+
+.Icon:hover {
+  color: #737199;
+  border-radius: 3vw;
 }
 
 .Menu-icon {
@@ -84,9 +98,6 @@ h3 {
   font-size: 5vw;
   display: flex;
   margin-top: 2vw;
-}
-
-.Title {
   text-decoration: underline;
 }
 
@@ -105,7 +116,6 @@ h3 {
   display: flex;
   gap: 1.2vw;
 }
-
 
 .Restart-icon {
   width: 6vw;
@@ -182,7 +192,6 @@ input {
 }
 
 #project-title:hover {
-  background-color: #e7eeda;
   color: #038d5d;
   border-radius: 3vw;
 }

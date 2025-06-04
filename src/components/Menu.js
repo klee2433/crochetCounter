@@ -42,6 +42,12 @@ function Menu() {
         deleteItem(`notes/${deletedProject}`);
     }
 
+    const handleKeyDown = (event) => {
+        if (event.key === 'Enter') {
+            addProject();
+        }
+    };
+
     return (
         <div class="Project">
             <h2>
@@ -61,7 +67,7 @@ function Menu() {
                         {projects.map((project, index) =>
                             <li key={index}>
                                 <button onClick={() => navigate(`/counter/${project}`)} class="Button" id="project-title">
-                                    <div class="Title">{project}</div>
+                                    <div>{project}</div>
                                 </button>
                             </li>
                         )}
@@ -71,7 +77,7 @@ function Menu() {
                     <ul class="No-bullets">
                         {dates.map((date, index) =>
                             <li key={index}>
-                                <button class="Button">
+                                <button class="Button" id="project-date">
                                     {date}
                                 </button>
                                 <button onClick={() => {deleteProject(index)}} class="Button">
@@ -87,7 +93,8 @@ function Menu() {
                     type="text"
                     placeholder="New Project Name"
                     value={newProject}
-                    onChange={handleInputChange}/>
+                    onChange={handleInputChange}
+                    onKeyDown={handleKeyDown}/>
                 <button onClick={() => {addProject()}} class="Button">
                     <IoIosAddCircle class="Menu-icon"/>
                 </button>
