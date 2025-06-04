@@ -12,7 +12,7 @@ function App() {
         <Routes>
           <Route index element={<Home />}/>
           <Route path="/home" element={<Home />}/>
-          <Route path="/counter" element={<Counter />}/>
+          <Route path="/counter/:project" element={<Counter />}/>
           <Route path="*" element={<NoPage />}/>
         </Routes>
       </BrowserRouter>

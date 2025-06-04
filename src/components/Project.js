@@ -2,14 +2,16 @@ import RowCounter from './RowCounter';
 import StitchCounter from './StitchCounter';
 
 import { usePersistedState } from '../hooks/usePesistedState';
+import { useParams } from 'react-router-dom';
 
 function Project() {
     const [notes, setNotes] = usePersistedState("notes","Notes")
+    const {project} = useParams();
 
     return (
         <div class="Project">
             <h2>
-                Crochet Project Title
+                {project}
             </h2>
             <div class="Counters">
                 <RowCounter />

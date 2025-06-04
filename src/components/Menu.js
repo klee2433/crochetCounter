@@ -51,7 +51,7 @@ function Menu() {
                     <ul class="No-bullets">
                         {projects.map((project, index) =>
                             <li key={index}>
-                                <button onClick={() => navigate('/counter')} class="Button">
+                                <button onClick={() => navigate(`/counter/${project}`)} class="Button">
                                     <div class="Title">{project}</div>
                                 </button>
                             </li>
