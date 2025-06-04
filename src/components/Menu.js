@@ -60,7 +60,7 @@ function Menu() {
                     <ul class="No-bullets">
                         {projects.map((project, index) =>
                             <li key={index}>
-                                <button onClick={() => navigate(`/counter/${project}`)} class="Button">
+                                <button onClick={() => navigate(`/counter/${project}`)} class="Button" id="project-title">
                                     <div class="Title">{project}</div>
                                 </button>
                             </li>
@@ -89,7 +89,7 @@ function Menu() {
                     value={newProject}
                     onChange={handleInputChange}/>
                 <button onClick={() => {addProject()}} class="Button">
-                    <IoIosAddCircle class="Icon"/>
+                    <IoIosAddCircle class="Menu-icon"/>
                 </button>
             </div>
         </div>
