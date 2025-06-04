@@ -4,6 +4,7 @@ import { IoIosAddCircle } from "react-icons/io";
 
 import { useState } from 'react';
 import { usePersistedState } from '../hooks/usePesistedState';
+import { deleteItem } from '../utils/localStorage';
 
 function Menu() {
     const navigate = useNavigate();
@@ -27,10 +28,16 @@ function Menu() {
     }
 
     function deleteProject(index) {
+        const deletedProject = projects[index];
+
         const updatedProjects = projects.filter((_, i) => i !== index);
         setProjects(updatedProjects);
         const updatedDates = dates.filter((_, i) => i !== index);
         setDates(updatedDates);
+
+        deleteItem(`rows/${deletedProject}`);
+        deleteItem(`stitches/${deletedProject}`);
+        deleteItem(`notes/${deletedProject}`);
     }
 
     return (

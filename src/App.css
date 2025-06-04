@@ -27,6 +27,7 @@ h2 {
   font-size: 7vw;
   justify-self: center;
   display: flex;
+  margin-bottom: 1.5vw;
 }
 
 h3 {
@@ -73,10 +74,10 @@ h3 {
 
 .List {
   text-align: left;
-  color: #4b4a67;
+  color: #FD96A9;
   font-size: 5vw;
   display: flex;
-  margin-bottom: 2vw;
+  margin-top: 2vw;
 }
 
 .Title {
@@ -144,7 +145,7 @@ h3 {
 .Name-input {
   display: flex;
   place-items: center center;
-  margin-left: 2vw;
+  margin-left: 5vw;
 }
 
 .No-bullets {
