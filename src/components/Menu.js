@@ -20,10 +20,12 @@ function Menu() {
     }
 
     function addProject() {
-        if (newProject.trim() !== "") {
+        if (newProject.trim() !== "" && !projects.includes(newProject)) {
             setProjects(p => [...p, newProject]);
             setDates(d => [...d, localeDate]);
             setNewProject("");
+        } else if (projects.includes(newProject)) {
+            alert(`Cannot use duplicate name: ${newProject}`);
         }
     }
 
