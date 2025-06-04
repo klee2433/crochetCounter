@@ -39,11 +39,15 @@ h3 {
 }
 
 #notes {
-  color: #4b4a67;
+  color: #226F54;
   font-size: 3.5vw;
   justify-self: center;
   margin-top: 3.5vw;
   display: flex;
+}
+
+#notes:hover {
+  color: #369876;
 }
 
 .Button {
@@ -72,6 +76,7 @@ h3 {
 }
 
 #home-icon:hover {
+  color: #8584b1;
   width: 8vw;
 }
 
@@ -189,6 +194,10 @@ td {
   border-radius: 3vw;
 }
 
+.Name-input:hover {
+  background: #e2f1e2;
+}
+
 input {
   flex: 1;
   border: none;
@@ -199,15 +208,22 @@ input {
   padding: 1vw;
 }
 
+input:hover {
+  color: #369876;
+}
+
 textarea {
   flex: 1;
   border: none;
   outline: none;
   background: #d7edd8;
   border-radius: 3vw;
-  color: #226F54;
   font-size: 4vw;
   padding: 3vw;
+}
+
+textarea:hover {
+  background: #e2f1e2;
 }
 
 .No-bullets {
