@@ -1,6 +1,8 @@
 import { useNavigate } from 'react-router-dom';
 import { IoIosTrash } from "react-icons/io";
 import { IoIosAddCircle } from "react-icons/io";
+import { MdDriveFileRenameOutline } from "react-icons/md";
+import { MdDateRange } from "react-icons/md";
 
 import { useState } from 'react';
 import { usePersistedState } from '../hooks/usePesistedState';
@@ -53,41 +55,6 @@ function Menu() {
             <h2>
                 My Crochet Projects
             </h2>
-            <div class="Title-list">
-                <div class="List">
-                    <i>Project Name</i>
-                </div>
-                <div class="List">
-                    <i>Date Started</i>
-                </div>
-            </div>
-            <div class="Project-list">
-                <div>
-                    <ul class="No-bullets">
-                        {projects.map((project, index) =>
-                            <li key={index}>
-                                <button onClick={() => navigate(`/counter/${project}`)} class="Button" id="project-title">
-                                    <div>{project}</div>
-                                </button>
-                            </li>
-                        )}
-                    </ul>
-                </div>
-                <div>
-                    <ul class="No-bullets">
-                        {dates.map((date, index) =>
-                            <li key={index}>
-                                <button class="Button" id="project-date">
-                                    {date}
-                                </button>
-                                <button onClick={() => {deleteProject(index)}} class="Button">
-                                    <IoIosTrash />
-                                </button>
-                            </li>
-                        )}
-                    </ul>
-                </div>
-            </div>
             <div class="Name-input">
                 <input 
                     type="text"
@@ -98,6 +65,38 @@ function Menu() {
                 <button onClick={() => {addProject()}} class="Button">
                     <IoIosAddCircle class="Menu-icon"/>
                 </button>
+            </div>
+            <div class="Project-list">
+                <table>
+                    <thead>
+                        <tr>
+                            <td class="List"><MdDriveFileRenameOutline /> Project Name</td>
+                            <td class="List"><MdDateRange /> Date Started</td>
+                            <td></td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {projects.map((project, index) =>
+                            <tr>
+                                <td>
+                                    <button onClick={() => navigate(`/counter/${project}`)} class="Button" id="project-title">
+                                        <div>{project}</div>
+                                    </button>
+                                </td>
+                                <td>
+                                    <button class="Button" id="project-date">
+                                        {dates[index]}
+                                    </button>
+                                </td>
+                                <td>
+                                    <button onClick={() => {deleteProject(index)}} class="Button" id="trash-button">
+                                        <IoIosTrash />
+                                    </button>
+                                </td>
+                            </tr>
+                        )}
+                    </tbody>
+                </table>
             </div>
         </div>
     );

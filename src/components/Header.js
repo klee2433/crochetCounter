@@ -7,7 +7,7 @@ function Header() {
     return (
         <header class="App-header">
             <button onClick={() => navigate('/home')} class="Button">
-                <IoIosHome class="Icon"/>
+                <IoIosHome class="Icon" id="home-icon"/>
             </button>
         </header>
     );
