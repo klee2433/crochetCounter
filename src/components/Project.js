@@ -5,8 +5,8 @@ import { usePersistedState } from '../hooks/usePesistedState';
 import { useParams } from 'react-router-dom';
 
 function Project() {
-    const [notes, setNotes] = usePersistedState("notes","Notes")
     const {project} = useParams();
+    const [notes, setNotes] = usePersistedState(`notes/${project}`,"Notes")
 
     return (
         <div class="Project">

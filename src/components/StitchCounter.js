@@ -3,9 +3,11 @@ import { RiSubtractFill } from "react-icons/ri";
 import { RiAddFill } from "react-icons/ri";
 
 import { usePersistedState } from '../hooks/usePesistedState';
+import { useParams } from 'react-router-dom';
 
 function StitchCounter() {
-    const [stitches, setStitches] = usePersistedState("stitches", 0);
+    const {project} = useParams();
+    const [stitches, setStitches] = usePersistedState(`stitches/${project}`, 0);
 
     return (
         <div>

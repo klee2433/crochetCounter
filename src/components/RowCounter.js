@@ -3,9 +3,11 @@ import { RiSubtractFill } from "react-icons/ri";
 import { RiAddFill } from "react-icons/ri";
 
 import { usePersistedState } from '../hooks/usePesistedState';
+import { useParams } from 'react-router-dom';
 
 function RowCounter() {
-    const [rows, setRows] = usePersistedState("rows", 0)
+    const {project} = useParams();
+    const [rows, setRows] = usePersistedState(`rows/${project}`, 0)
 
     return (
         <div>
