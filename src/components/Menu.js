@@ -67,6 +67,15 @@ function Menu() {
         }
     };
 
+    const [sortDirection, setSortDirection] = useState('asc');
+
+    const handleSort = () => {
+        setSortDirection(sortDirection === 'asc' ? 'desc' : 'asc');
+    }
+
+    const sortedProjects = sortDirection === 'asc' ? projects : projects.toReversed();
+    const sortedDates = sortDirection === 'asc' ? dates : dates.toReversed();
+
     return (
         <div class="Project">
             <h2>
@@ -90,11 +99,13 @@ function Menu() {
                         <tr>
                             <td class="List"><MdDriveFileRenameOutline /> &nbsp; Project Name</td>
                             <td class="List">&nbsp; &nbsp; <MdDateRange /> &nbsp; Date Started</td>
-                            <td></td>
+                            <td> <button onClick={() => handleSort()} class="Button" id="sort-button">
+                                {sortDirection === 'desc' ? '▲' : '▼'}
+                            </button></td>
                         </tr>
                     </thead>
                     <tbody>
-                        {projects.map((project, index) =>
+                        {sortedProjects.map((project, index) =>
                             <tr>
                                 <td>
                                     <button onClick={() => navigate(`/counter/${project}`)} class="Button" id="project-title">
@@ -103,7 +114,7 @@ function Menu() {
                                 </td>
                                 <td>
                                     <button class="Button" id="project-date">
-                                        {dates[index]}
+                                        {sortedDates[index]}
                                     </button>
                                 </td>
                                 <td>

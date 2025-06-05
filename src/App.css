@@ -264,6 +264,15 @@ textarea:hover {
   border-radius: 3vw;
 }
 
+#sort-button {
+  font-size: 4vw;
+}
+
+#sort-button:hover {
+  color: #8FD694;
+  border-radius: 3vw;
+}
+
 .App-logo {
   display: flex;
   place-self: end;
