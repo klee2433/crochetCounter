@@ -17,14 +17,14 @@
 
 h1 {
   color: #4b4a67;
-  font-size: 12vw;
+  font-size: 11vw;
   justify-self: center;
   display: flex;
 }
 
 h2 {
   color: #4b4a67;
-  font-size: 7vw;
+  font-size: 6vw;
   place-content: center center;
   display: flex;
 }
@@ -41,9 +41,8 @@ h3 {
   background: #d7edd8;
   border-radius: 3vw;
   padding: 1vw;
-  margin-top: 4vw;
-  margin-left: 3vw;
-  margin-right: 3vw;
+  margin: 3vw;
+  margin-bottom: 1vw;
 }
 
 .Notes {
@@ -266,8 +265,9 @@ textarea:hover {
 }
 
 .App-logo {
-  height: 40vmin;
-  pointer-events: none;
+  display: flex;
+  place-self: end;
+  margin-left: auto;
 }
 
 @media (prefers-reduced-motion: no-preference) {

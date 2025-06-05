@@ -10,6 +10,7 @@ body {
   margin: 2vw;
   font-family: 'MonomaniacOne-Regular';
   background-color: #8FD694;
+  background-image: url("images/background.jpg");
 }
 
 @font-face {
