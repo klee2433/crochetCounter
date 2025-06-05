@@ -10,7 +10,7 @@ export function usePersistedState(key, initialValue) {
 
     useEffect(() => {
         setItem(key, value);
-    }, [value]);
+    }, [key, value]);
 
     return [value, setValue];
 }

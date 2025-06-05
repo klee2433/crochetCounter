@@ -3,10 +3,13 @@ import { IoIosTrash } from "react-icons/io";
 import { IoIosAddCircle } from "react-icons/io";
 import { MdDriveFileRenameOutline } from "react-icons/md";
 import { MdDateRange } from "react-icons/md";
+import { BiRename } from "react-icons/bi";
 
 import { useState } from 'react';
 import { usePersistedState } from '../hooks/usePesistedState';
 import { deleteItem } from '../utils/localStorage';
+
+import { Confirm } from 'react-admin';
 
 function Menu() {
     const navigate = useNavigate();
@@ -30,6 +33,20 @@ function Menu() {
             alert(`Cannot use duplicate name: ${newProject}`);
         }
     }
+
+    const [open, setOpen] = useState(false);
+    const [indexToDelete, setIndexToDelete] = useState(null);
+    const handleClick = (index) => {
+        setOpen(true);
+        setIndexToDelete(index)
+    };
+    const handleDialogClose = () => {
+        setOpen(false);
+    };
+    const handleConfirm = () => {
+        deleteProject(indexToDelete)
+        setOpen(false);
+    };
 
     function deleteProject(index) {
         const deletedProject = projects[index];
@@ -56,9 +73,10 @@ function Menu() {
                 My Crochet Projects
             </h2>
             <div class="Name-input">
+                <BiRename class="Edit-icon"/>
                 <input 
                     type="text"
-                    placeholder="New Project Name"
+                    placeholder="New Project Name" 
                     value={newProject}
                     onChange={handleInputChange}
                     onKeyDown={handleKeyDown}/>
@@ -89,9 +107,53 @@ function Menu() {
                                     </button>
                                 </td>
                                 <td>
-                                    <button onClick={() => {deleteProject(index)}} class="Button" id="trash-button">
+                                    <button onClick={() => {handleClick(index)}} class="Button" id="trash-button">
                                         <IoIosTrash />
                                     </button>
+                                    <Confirm
+                                        isOpen={open}
+                                        title={`Delete "${project}"`}
+                                        content="Are you sure you want to delete this project?"
+                                        onConfirm={handleConfirm}
+                                        onClose={handleDialogClose}
+                                        confirm="Yes, delete forever"
+                                        cancel="No, do not delete"
+                                        sx={{
+                                            '& .MuiDialog-paper': {
+                                                borderRadius:'3vw',
+                                            },
+                                            '& .MuiDialogTitle-root': {
+                                                backgroundColor: 'rgb(186, 239, 189)',
+                                                color: ' #4B4A67',
+                                                padding:'2vw',
+                                                fontFamily:'MonomaniacOne-Regular',
+                                                fontSize:'3vw',
+                                            },
+                                            '& .MuiDialogContent-root': {
+                                                color: ' #4B4A67',
+                                                padding:'2vw',
+                                                fontFamily:'MonomaniacOne-Regular',
+                                                fontSize:'3vw'
+                                            },
+                                            '& .MuiDialogActions-root': {
+                                                padding:'2vw',
+                                            },
+                                            '& .RaConfirm-confirmPrimary': { // Target the confirm button
+                                                backgroundColor: ' #FD96A9',
+                                                '&:hover': {
+                                                backgroundColor: ' #f8bfca',
+                                                },
+                                            },
+                                            '& .MuiButton-text': { // Target the cancel button
+                                                color: ' #4B4A67',
+                                                fontFamily:'MonomaniacOne-Regular',
+                                                fontSize:'2vw',
+                                                '&:hover': {
+                                                color: ' #8584b1',
+                                                },
+                                            },
+                                        }}
+                                    />
                                 </td>
                             </tr>
                         )}

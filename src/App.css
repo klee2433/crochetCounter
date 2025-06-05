@@ -27,7 +27,7 @@ h2 {
   font-size: 7vw;
   justify-self: center;
   display: flex;
-  margin-bottom: 1.5vw;
+  margin-bottom: 2vw;
 }
 
 h3 {
@@ -77,14 +77,20 @@ h3 {
 
 #home-icon:hover {
   color: #8584b1;
-  width: 8vw;
 }
-
 
 .Menu-icon {
   width: 6vw;
   display: flex;
   place-items: center center;
+}
+
+.Edit-icon {
+  padding-top: 1.5vw;
+  font-size: 7vw;
+  display: flex;
+  place-items: center center;
+  color: #226F54;
 }
 
 .Project {
@@ -108,7 +114,7 @@ h3 {
 }
 
 table {
-  margin-top: 2vw;
+  margin-top: 1vw;
   margin-bottom: 2vw;
 }
 
@@ -189,6 +195,7 @@ td {
   display: flex;
   place-items: center space-between;
   margin-left: 2vw;
+  margin-right: 2vw;
   background: #d7edd8;
   padding: 1vw;
   border-radius: 3vw;
