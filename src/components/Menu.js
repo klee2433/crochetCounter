@@ -99,8 +99,8 @@ function Menu() {
                         <tr>
                             <td class="List"><MdDriveFileRenameOutline /> &nbsp; Project Name</td>
                             <td class="List">&nbsp; &nbsp; <MdDateRange /> &nbsp; Date Started</td>
-                            <td> <button onClick={() => handleSort()} class="Button" id="sort-button">
-                                {sortDirection === 'desc' ? '▲' : '▼'}
+                            <td> <button onClick={() => handleSort()} class="Button">
+                                <div class="Icon" id="sort-button">{sortDirection === 'desc' ? '▲' : '▼'}</div>
                             </button></td>
                         </tr>
                     </thead>

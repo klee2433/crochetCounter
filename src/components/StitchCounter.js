@@ -83,11 +83,11 @@ function StitchCounter() {
                     />
 
                     <button onClick={() => {if (stitches > 0) setStitches(stitches - 1)}} class="Button" id="subtract-button">
-                        <RiSubtractFill class="Icon"/>
+                        <RiSubtractFill class="Count-icon"/>
                     </button>
 
                     <button onClick={() => setStitches(stitches + 1)} class="Button" id="add-button">
-                        <RiAddFill class="Icon"/>
+                        <RiAddFill class="Count-icon"/>
                     </button>
                 </div>
             </div>

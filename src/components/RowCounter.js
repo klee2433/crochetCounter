@@ -83,11 +83,11 @@ function RowCounter() {
                     />
 
                     <button onClick={() => {if (rows > 0) setRows(rows - 1)}} class="Button" id="subtract-button">
-                        <RiSubtractFill class="Icon"/>
+                        <RiSubtractFill class="Count-icon"/>
                     </button>
 
                     <button onClick={() => setRows(rows + 1)} class="Button" id="add-button">
-                        <RiAddFill class="Icon"/>
+                        <RiAddFill class="Count-icon"/>
                     </button>
                 </div>
             </div>
