@@ -23,7 +23,7 @@ function Project() {
             <div class="Notes-container">
                 <div class="Notes">
                     <BiRename class="Edit-icon"/>
-                    &nbsp;Notes
+                    &nbsp; <div>Notes</div>
                 </div>
                 <textarea 
                     id="notes" 

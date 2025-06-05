@@ -88,8 +88,8 @@ function Menu() {
                 <table>
                     <thead>
                         <tr>
-                            <td class="List"><MdDriveFileRenameOutline /> Project Name</td>
-                            <td class="List"><MdDateRange /> Date Started</td>
+                            <td class="List"><MdDriveFileRenameOutline /> &nbsp; Project Name</td>
+                            <td class="List">&nbsp; &nbsp; <MdDateRange /> &nbsp; Date Started</td>
                             <td></td>
                         </tr>
                     </thead>

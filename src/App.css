@@ -40,7 +40,7 @@ h3 {
 .Notes-container {
   background: #d7edd8;
   border-radius: 3vw;
-  padding: 2vw;
+  padding: 1vw;
   margin-top: 4vw;
   margin-left: 3vw;
   margin-right: 3vw;
@@ -55,7 +55,7 @@ h3 {
 
 #notes {
   color: #226F54;
-  font-size: 3.5vw;
+  font-size: 3vw;
   justify-self: center;
   margin-top: 1vw;
   display: flex;
@@ -77,6 +77,10 @@ h3 {
 .Button:hover {
   color: #8FD694;
   border-radius: 3vw;
+}
+
+#project-date {
+  font-size: 4vw;
 }
 
 #project-date:hover {
@@ -119,7 +123,7 @@ h3 {
 
 .List {
   color: #4B4A67;
-  font-size: 5vw;
+  font-size: 4vw;
 }
 
 .Project-list {
@@ -211,6 +215,7 @@ td {
   place-items: center space-between;
   margin-left: 2vw;
   margin-right: 2vw;
+  margin-top: 3vw;
   background: #d7edd8;
   padding: 1vw;
   border-radius: 3vw;
@@ -226,7 +231,7 @@ input {
   outline: none;
   background: transparent;
   color: #226F54;
-  font-size: 4vw;
+  font-size: 3.5vw;
   padding: 1vw;
 }
 
@@ -238,18 +243,21 @@ textarea {
   flex: 1;
   border: none;
   outline: none;
-  background: #d7edd8;
+  background: #e2f1e2;
   border-radius: 3vw;
-  font-size: 4vw;
   padding: 1vw;
 }
 
 textarea:hover {
-  background: #e2f1e2;
+  background: #eaf6eb;
 }
 
 .No-bullets {
   list-style-type:none;
+}
+
+#project-title {
+  font-size: 4vw;
 }
 
 #project-title:hover {
