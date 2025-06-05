@@ -25,9 +25,8 @@ h1 {
 h2 {
   color: #4b4a67;
   font-size: 7vw;
-  justify-self: center;
+  place-content: center center;
   display: flex;
-  margin-bottom: 2vw;
 }
 
 h3 {
@@ -38,11 +37,27 @@ h3 {
   margin-bottom: 2vw;
 }
 
+.Notes-container {
+  background: #d7edd8;
+  border-radius: 3vw;
+  padding: 2vw;
+  margin-top: 4vw;
+  margin-left: 3vw;
+  margin-right: 3vw;
+}
+
+.Notes {
+  color: #226F54;
+  font-size: 5vw;
+  display: flex;
+  padding-left: 2vw;
+}
+
 #notes {
   color: #226F54;
   font-size: 3.5vw;
   justify-self: center;
-  margin-top: 3.5vw;
+  margin-top: 1vw;
   display: flex;
 }
 
@@ -226,7 +241,7 @@ textarea {
   background: #d7edd8;
   border-radius: 3vw;
   font-size: 4vw;
-  padding: 3vw;
+  padding: 1vw;
 }
 
 textarea:hover {
