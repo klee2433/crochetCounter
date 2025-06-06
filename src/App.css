@@ -290,3 +290,27 @@ textarea:hover {
     transform: rotate(360deg);
   }
 }
+
+.Project-image {
+  display: block;
+  margin: auto;
+  width: 80vw;
+}
+
+.Upload-image {
+  display: flex;
+  place-self: center center;
+  place-items: center center;
+  text-align: center;
+  color: #226F54;
+  font-size: 3.5vw;
+  background-color: #d7edd8;
+  border: none;
+  border-radius: 3vw;
+  padding: 1vw;
+  margin-top: 2vw;
+}
+
+.Upload-image:hover {
+  color: #8FD694;
+}

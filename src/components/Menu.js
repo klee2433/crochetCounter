@@ -77,30 +77,30 @@ function Menu() {
     const sortedDates = sortDirection === 'asc' ? dates : dates.toReversed();
 
     return (
-        <div class="Project">
+        <div className="Project">
             <h2>
                 My Crochet Projects
             </h2>
-            <div class="Name-input">
-                <BiRename class="Edit-icon"/>
+            <div className="Name-input">
+                <BiRename className="Edit-icon"/>
                 <input 
                     type="text"
                     placeholder="New Project Name" 
                     value={newProject}
                     onChange={handleInputChange}
                     onKeyDown={handleKeyDown}/>
-                <button onClick={() => {addProject()}} class="Button">
-                    <IoIosAddCircle class="Menu-icon"/>
+                <button onClick={() => {addProject()}} className="Button">
+                    <IoIosAddCircle className="Menu-icon"/>
                 </button>
             </div>
-            <div class="Project-list">
+            <div className="Project-list">
                 <table>
                     <thead>
                         <tr>
-                            <td class="List"><MdDriveFileRenameOutline /> &nbsp; Project Name</td>
-                            <td class="List">&nbsp; &nbsp; <MdDateRange /> &nbsp; Date Started</td>
-                            <td> <button onClick={() => handleSort()} class="Button">
-                                <div class="Icon" id="sort-button">{sortDirection === 'desc' ? '▲' : '▼'}</div>
+                            <td className="List"><MdDriveFileRenameOutline /> &nbsp; Project Name</td>
+                            <td className="List">&nbsp; &nbsp; <MdDateRange /> &nbsp; Date Started</td>
+                            <td> <button onClick={() => handleSort()} className="Button">
+                                <div className="Icon" id="sort-button">{sortDirection === 'desc' ? '▲' : '▼'}</div>
                             </button></td>
                         </tr>
                     </thead>
@@ -108,17 +108,17 @@ function Menu() {
                         {sortedProjects.map((project, index) =>
                             <tr>
                                 <td>
-                                    <button onClick={() => navigate(`/counter/${project}`)} class="Button" id="project-title">
+                                    <button onClick={() => navigate(`/counter/${project}`)} className="Button" id="project-title">
                                         <div>{project}</div>
                                     </button>
                                 </td>
                                 <td>
-                                    <button class="Button" id="project-date">
+                                    <button className="Button" id="project-date">
                                         {sortedDates[index]}
                                     </button>
                                 </td>
                                 <td>
-                                    <button onClick={() => {handleClick(index)}} class="Button" id="trash-button">
+                                    <button onClick={() => {handleClick(index)}} className="Button" id="trash-button">
                                         <IoIosTrash />
                                     </button>
                                     <Confirm

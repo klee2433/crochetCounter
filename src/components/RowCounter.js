@@ -32,10 +32,10 @@ function RowCounter() {
             <h3>
                 Rows
             </h3>
-            <div class="Counter-buttons-outer">
-                <div class="Counter-buttons">
-                    <button onClick={() => handleClick()} class="Button" id="restart-button">
-                        <RiRestartLine class="Restart-icon"/>
+            <div className="Counter-buttons-outer">
+                <div className="Counter-buttons">
+                    <button onClick={() => handleClick()} className="Button" id="restart-button">
+                        <RiRestartLine className="Restart-icon"/>
                     </button>
                     <Confirm
                         isOpen={open}
@@ -82,12 +82,12 @@ function RowCounter() {
                         }}
                     />
 
-                    <button onClick={() => {if (rows > 0) setRows(rows - 1)}} class="Button" id="subtract-button">
-                        <RiSubtractFill class="Count-icon"/>
+                    <button onClick={() => {if (rows > 0) setRows(rows - 1)}} className="Button" id="subtract-button">
+                        <RiSubtractFill className="Count-icon"/>
                     </button>
 
-                    <button onClick={() => setRows(rows + 1)} class="Button" id="add-button">
-                        <RiAddFill class="Count-icon"/>
+                    <button onClick={() => setRows(rows + 1)} className="Button" id="add-button">
+                        <RiAddFill className="Count-icon"/>
                     </button>
                 </div>
             </div>
