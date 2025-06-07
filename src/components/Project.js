@@ -14,7 +14,7 @@ import { Confirm } from 'react-admin';
 
 function Project() {
     const {project} = useParams();
-    const [notes, setNotes] = usePersistedState(`notes/${project}`,"Enter notes about this project here...");
+    const [notes, setNotes] = usePersistedState(`notes/${project}`,"--- All changes are saved automatically --- \n Enter notes about this project here...");
     const [fileName, setFileName] = usePersistedState(`file/${project}`,null);
 
     const handleFile = (file) => {
@@ -56,7 +56,7 @@ function Project() {
                     <Confirm
                         isOpen={open}
                         title={"Clear Notes"}
-                        content="Are you sure you want to delete all notes?"
+                        content="Are you sure you want to delete notes for this project?"
                         onConfirm={handleConfirm}
                         onClose={handleDialogClose}
                         confirm="Yes, delete forever"

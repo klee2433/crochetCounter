@@ -8,7 +8,7 @@ export function usePersistedState(key, initialValue) {
 
         // upon first loading the app
         if (key == "projects" && item == null) {
-            setItem("notes/Template", "Enter notes about this project here...\n(Example)\n Row 1: 5 dc \n Row 2: 2 sc in each dc around");
+            setItem("notes/Template", "--- All changes are saved automatically --- \n(Example)\n Row 1: 5 dc \n Row 2: 2 sc in each dc around");
         }
 
         return item || initialValue;
