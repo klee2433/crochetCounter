@@ -45,6 +45,11 @@ h3 {
   margin-bottom: 1vw;
 }
 
+.Notes-header {
+  display: flex;
+  place-content: center space-between;
+}
+
 .Notes {
   color: #226F54;
   font-size: 5vw;
@@ -79,7 +84,7 @@ h3 {
 }
 
 #project-date {
-  font-size: 4vw;
+  font-size: 3.5vw;
 }
 
 #project-date:hover {
@@ -89,6 +94,11 @@ h3 {
 .Icon {
   width: 6vw;
   color: #4b4a67;
+  display: flex;
+  place-items: center center;
+}
+
+.Clear-icon {
   display: flex;
   place-items: center center;
 }
@@ -180,6 +190,14 @@ td {
   color: #f8bfca;
 }
 
+#clear-notes-button {
+  color: #226F54;
+}
+
+#clear-notes-button:hover {
+  color: #8FD694;
+}
+
 #restart-button {
   background-color: #FD96A9;
   border-radius: 3vw;
@@ -254,7 +272,7 @@ textarea:hover {
 }
 
 #project-title {
-  font-size: 4vw;
+  font-size: 3.5vw;
 }
 
 #project-title:hover {
