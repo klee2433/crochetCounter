@@ -12,13 +12,13 @@ import { deleteItem } from '../utils/localStorage';
 import { Confirm } from 'react-admin';
 
 function Menu() {
-    const navigate = useNavigate();
-    const [projects, setProjects] = usePersistedState("projects", [])
-    const [dates, setDates] = usePersistedState("dates", [])
-    const [newProject, setNewProject] = useState("");
-
     const currentDate = new Date();
-    const localeDate = currentDate.toLocaleDateString();
+    const localeDate = currentDate.toLocaleString();
+
+    const navigate = useNavigate();
+    const [projects, setProjects] = usePersistedState("projects", ["Template"])
+    const [dates, setDates] = usePersistedState("dates", [localeDate])
+    const [newProject, setNewProject] = useState("");
 
     function handleInputChange(event) {
         setNewProject(event.target.value)
