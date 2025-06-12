@@ -7,3 +7,8 @@ Desktop app used for tracking work-in-progress crochet projects and keeping coun
 Tech Used: HTML, CSS, JavaScript, React
 
 Uses ElectronJS to open the react app on desktop by running `electron:serve`
+
+# Example Pages
+
+![Menu Page](src/images/menu-page.png)
+![Counter Page](src/images/counter-page.png)

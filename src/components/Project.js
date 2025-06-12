@@ -38,7 +38,7 @@ function Project() {
             <h2>
                 <MdDriveFileRenameOutline /> &nbsp; {project}
             </h2> 
-            <img src={fileName} className="Project-image"/>
+            <img src={fileName} className="Project-image" alt=""/>
             <FileUploader handleFile={handleFile} /> 
             <div className="Counters">
                 <RowCounter />
